@@ -4,8 +4,8 @@ import Marker from './Marker';
 
 const venues = require('json-loader!./bars.json')
 const defaultProps = {
-center: {lat: 51.5074, lng: 0.1278},
-zoom: 10,
+center: {lat: 51.463916, lng: -0.132635},
+zoom: 15,
 };
 class App extends React.Component {
     render(){
