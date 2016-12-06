@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Two Brewers",
+        "lat": 51.463162,
+        "lng": -0.134872,
+        "category": "Bar",
+        "description" : "Blah blah"
+    },
+    {
+        "name": "Kaz Bar",
+        "lat": 51.463916,
+        "lng": -0.132635,
+        "category": "Bar",
+        "description" : "Blah blah"
+    },
+    {
+        "name": "The Bridge Bar",
+        "lat": 51.464950,
+        "lng": -0.131122,
+        "category": "Bar",
+        "description" : "Blah blah"
+    },
+    {
+        "name": "Soho Gyms Clapham",
+        "lat": 51.463030,
+        "lng": -0.134223,
+        "category": "Fitness",
+        "description" : "Blah blah"
+    }
+]
