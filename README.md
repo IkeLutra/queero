@@ -2,7 +2,7 @@
 
 ## Roadmap
 
-- Add GraphQL
+- ~~Add GraphQL~~
 - Add filters for:
     - Category
     - Permanently closed

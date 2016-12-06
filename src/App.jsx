@@ -1,5 +1,8 @@
 const React = require('react');
 import GoogleMap from 'google-map-react';
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
+
 import Marker from './Marker';
 
 const venues = require('json-loader!./bars.json')
@@ -9,8 +12,12 @@ zoom: 15,
 };
 class App extends React.Component {
     render(){
-        console.log(venues);
-        const markers = venues.map((venue)=> {
+        console.log(this.props);
+        if (this.props.data.loading) {
+              return (<div>Loading</div>)
+            }
+
+        const markers = this.props.data.allPlaces.map((venue)=> {
             return <Marker key={venue.name} {...venue}></Marker>
         })
         return <GoogleMap
@@ -21,4 +28,16 @@ class App extends React.Component {
     }
 };
 
-module.exports = App;
+const PlaceQuery = gql`query allPosts {
+  allPlaces {
+    name
+    description
+    lat
+    lng
+    category
+  }
+}`
+
+const AppWithData = graphql(PlaceQuery)(App);
+
+module.exports = AppWithData;
